@@ -1,0 +1,22 @@
+/*Created By Elizabeth on 2017/12/31*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: url(../images/cfbc-value-3.jpg) no-repeat;
+}
+
+#registForm .form-group {
+    margin-top: 15px;
+}
+
+#registForm form {
+    /*background: lightblue;*/
+}

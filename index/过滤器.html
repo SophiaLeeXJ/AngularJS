@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+    <script src="../js/assets/angular.min.js"></script>
+    <script src="../js/js/filterCtrl.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="filterContrl">
+        <p>
+            {{123141212 | number}}
+        </p>
+
+        <p>
+            {{123141212 | currency}}
+        </p>
+
+        <p>
+            {{123141212 | currency: 'RMB'}}
+        </p>
+
+        <p>
+            defaultDate：{{today}}
+        </p>
+
+        <p>
+            short：{{today | date: 'short'}}
+        </p>
+
+        <p>
+            shortDate：{{today | date: 'shortDate'}}
+        </p>
+
+        <p>
+            longDate：{{today | date: 'longDate'}}
+        </p>
+
+        <p>
+            fullDate：{{today | date: 'fullDate'}}
+        </p>
+
+        <p>
+            mediumDate：{{today | date: 'mediumDate'}}
+        </p>
+
+        <p>
+            shortTime：{{today | date: 'shortTime'}}
+        </p>
+
+        <p>
+            mediumTime：{{today | date: 'mediumTime'}}
+        </p>
+
+        <p>
+            Year：
+            {{today | date: 'y'}}
+            {{today | date: 'yy'}}
+            {{today | date: 'yyyy'}}
+        </p>
+
+        <p>
+            Month：
+            {{today | date: 'M'}}
+            {{today | date: 'MM'}}
+            {{today | date: 'MMM'}}
+            {{today | date: 'MMMM'}}
+        </p>
+
+        <p>
+            Day：
+            day in month:
+            {{today | date: 'd'}}
+            {{today | date: 'dd'}}
+            day in week:
+            {{today | date: 'EEE'}}
+            {{today | date: 'EEEE'}}
+        </p>
+
+        <p>
+            Hour：
+            {{today | date: 'HH'}}
+            {{today | date: 'H'}}
+            {{today | date: 'hh'}}
+            {{today | date: 'h'}}
+        </p>
+
+        <p>
+            Minute：
+            {{today | date: 'm'}}
+            {{today | date: 'mm'}}
+        </p>
+
+        <p>
+            Second：
+            {{today | date: 's'}}
+            {{today | date: 'ss'}}
+            {{today | date: '.sss'}}
+        </p>
+
+        <p>
+            时间：{{today | date: 'y-MM-d H:mm:ss'}}
+        </p>
+
+    </div>
+</div>
+
+</body>
+</html>

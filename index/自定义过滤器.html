@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义过滤器</title>
+    <script src="../js/assets/angular.min.js"></script>
+    <script src="../js/js/myFilter2.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="firstCtrl">
+        <ul>
+            <li ng-repeat="user in userData | filterAge | filterCity">
+                {{user.name}}
+                {{user.age}}
+                {{user.city}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

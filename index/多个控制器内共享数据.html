@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多个控制器内共享数据</title>
+    <script src="../js/assets/angular.min.js"></script>
+    <script src="../js/js/moreControllerShareData.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="shareDataFirstContrl">
+        <input type="text" ng-model="data.name">
+        <input type="text" ng-model="Data.message">
+        <p>
+            first-name: {{data.name}}
+        </p>
+        <p>
+            first-Data: {{Data.message}}
+        </p>
+    </div>
+    <div ng-controller="shareDataSecContrl">
+        <p>
+            second-name: {{data.name}}
+        </p>
+        <p>
+            second-Data: {{Data.message}}
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

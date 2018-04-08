@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点指令</title>
+    <script src="../js/assets/angular.min.js"></script>
+    <script src="../js/js/insideDev3.js"></script>
+</head>
+<body>
+
+
+<div ng-app="myApp">
+
+    <div ng-controller="firstController">
+
+        <button ng-click="changeStatus($event)">切换状态</button>
+
+        <div>{{status}}</div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="../js/assets/jquery-3.2.1.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">col-md-3</div>
+        <div class="col-md-6">col-md-6</div>
+    </div>
+</div>
+
+<div id="div"></div>
+
+<script>
+    var obj = {
+        b: 20,
+        set: function(key,val){
+            obj[key] = val;
+            document.querySelector('div').innerHTML = val;
+        }
+    }
+    obj.set('b',25);
+</script>
+
+</body>
+</html>

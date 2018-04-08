@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>介绍依赖注入</title>
+    <script src="../js/assets/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+
+    var A = function(){
+        this.getName = function(){
+            return 'Elizabeth';
+        }
+    };
+    var a = new A();
+
+
+    var B = function(){
+        $('body').html(a.getName());
+    };
+    var b = new B();
+
+//    JS中的两个方法：
+//    将a传入b;
+//    a是全局变量；
+
+</script>
+
+</body>
+</html>

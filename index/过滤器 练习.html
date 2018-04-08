@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器 练习</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+    <script src="../js/assets/angular.min.js"></script>
+    <script src="../js/js/filterPractice.js"></script>
+    <style>
+        .orderColor {
+            color: red;
+        }
+        table thead th {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div ng-app="product">
+    <div class="containter" ng-controller="productController">
+        <div class="form-search">
+            <form action="#" method="post" class="form-horizontal">
+                <div class="control-label col-md-6">
+                    <input type="text" class="form-control" ng-model="search"><!--只对id进行搜索：ng-model="search.id"-->
+                </div>
+                <button class="btn btn-primary">Search</button>
+            </form>
+        </div>
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th ng-click="changeOrder('id')" ng-class="{dropup:order === ''}">
+                        产品编号 <span ng-class="{orderColor:orderType === 'id'}" class="caret"></span>
+                    </th>
+                    <th ng-click="changeOrder('name')" ng-class="{dropup:order === ''}">
+                        产品名称 <span ng-class="{orderColor:orderType === 'name'}" class="caret"></span>
+                    </th>
+                    <th ng-click="changeOrder('price')" ng-class="{dropup:order === ''}">
+                        产品价格 <span ng-class="{orderColor:orderType === 'price'}" class="caret"></span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in productData | filter:search | orderBy:order + orderType"><!--也可以只对id进行搜索：filter:{id:search}-->
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price | currency: '￥'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

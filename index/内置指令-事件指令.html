@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件内置指令</title>
+    <script src="../js/assets/angular.min.js"></script>
+    <script src="../js/js/insideDev3.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div ng-app="myApp">
+
+    <div ng-controller="firstController">
+
+        <!--<div ng-style="{color: 'red', 'margin-top': '50px'}">ng-style</div>-->
+        <!--放在controller中-->
+
+        <div ng-style="defaultStyle">我是放在controller中的ng-style</div>
+
+        <!--ng-class-->
+        <div ng-class="{red:status}">我是被ng-class改变样式的！</div>
+
+        <button ng-click="changeStyle()">改变样式</button>
+
+    </div>
+
+</div>
+
+</body>
+</html>

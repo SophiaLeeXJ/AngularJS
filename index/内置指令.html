@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置指令</title>
+    <script src="../js/assets/angular.min.js"></script>
+    <script src="../js/js/insideDev1.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp">
+    <!--<div ng-controller="firstController"></div>-->
+
+    <p>{{1+1}}</p>
+    <p ng-bind="1+1"></p>
+    <p ng-bind-template="{{1+1}}"></p>
+
+    <ul ng-init="CityArr=['北京','上海','广州','成都','杭州']">
+        <li ng-repeat="city in CityArr">
+            <span> index: {{$index}} </span>
+            <span> first: {{$first}} </span>
+            <span> middle: {{$middle}} </span>
+            <span> last: {{$last}} </span>
+
+            <span>{{city}}</span>
+        </li>
+    </ul>
+
+    <div ng-include="'include.html'"></div>
+
+    <div ng-include src="'include.html'"></div>
+
+</div>
+
+</body>
+</html>

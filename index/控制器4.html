@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器4</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="../js/assets/jquery-3.2.1.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../js/assets/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="controllerForth" ng-controller="CtrlForth">
+    <div class="container">
+        <form action="#" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="firstName" class="control-label">FirstName：</label>
+                <div class="col-md-4">
+                    <input type="text" id="firstName" ng-model="firstName" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="control-label">LastName：</label>
+                <div class="col-md-4">
+                    <input type="text" id="lastName" ng-model="lastName" class="form-control">
+                </div>
+            </div>
+            FullName：{{fullName()}}
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
